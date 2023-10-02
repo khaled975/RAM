@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/RAM/static/css/main.2979d7b8.css",
+    "main.js": "/RAM/static/js/main.f326fc31.js",
+    "static/media/output-onlinegiftools.gif": "/RAM/static/media/output-onlinegiftools.c4729074e18a5d241a7b.gif",
+    "static/media/product.png": "/RAM/static/media/product.44b7d815f4c3c4a99ae5.png",
+    "static/media/match-bg.png": "/RAM/static/media/match-bg.fe481353d8079b4d5b9a.png",
+    "static/media/NotoKufiArabic-Light.ttf": "/RAM/static/media/NotoKufiArabic-Light.54d73927fa6133816b90.ttf",
+    "static/media/NotoKufiArabic-Medium.ttf": "/RAM/static/media/NotoKufiArabic-Medium.827697551043cca86d3f.ttf",
+    "static/media/NotoKufiArabic-Bold.ttf": "/RAM/static/media/NotoKufiArabic-Bold.c4f107fff7c198030144.ttf",
+    "static/media/NotoKufiArabic-Regular.ttf": "/RAM/static/media/NotoKufiArabic-Regular.62990db79ea4e650485f.ttf",
+    "static/media/barnd-bg.png": "/RAM/static/media/barnd-bg.0207bed48b29d71b6d8f.png",
+    "static/media/mastercard.svg": "/RAM/static/media/mastercard.6fe5209e5a89dcb7cf7ca731be47ddf9.svg",
+    "index.html": "/RAM/index.html",
+    "main.2979d7b8.css.map": "/RAM/static/css/main.2979d7b8.css.map",
+    "main.f326fc31.js.map": "/RAM/static/js/main.f326fc31.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2979d7b8.css",
+    "static/js/main.f326fc31.js"
+  ]
+}
