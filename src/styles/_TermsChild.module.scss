@@ -1,0 +1,10 @@
+@use "../helpers/mixins" as *;
+@use "../helpers/fonts" as *;
+
+.termsChild {
+  padding: 0 2.5rem;
+  @include flex-variant(flex, $direction: row, $gap: 1.25rem);
+  span {
+    line-height: 1.5rem;
+  }
+}

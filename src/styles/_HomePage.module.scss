@@ -1,0 +1,58 @@
+@use "../helpers/fonts" as *;
+@use "../helpers/mixins" as *;
+
+.body {
+  .info {
+    width: 80%;
+    @include flex-variant(flex, $direction: column);
+    color: #fff;
+    .text {
+      h1 {
+        margin-bottom: 15px;
+        font-size: 3vw;
+        font-family: "Kufi-Medium", sans-serif;
+      }
+
+      p {
+        font-size: 1.5vw;
+        line-height: 1.7;
+        font-family: "Kufi-Regular", sans-serif;
+      }
+
+      @media (max-width: 800px) {
+        h1 {
+          font-size: 7vw;
+        }
+        p {
+          font-size: 3.5vw;
+        }
+      }
+    }
+  }
+  .storeBtn {
+    margin-top: 35px;
+    @include flex-variant(flex, $direction: row, $justify: space-between);
+    .icons {
+      margin: 0px 20px;
+    }
+    span {
+      font-size: 23px;
+      display: flex;
+      color: #fff;
+    }
+  }
+  .storeStyle {
+    margin-top: 35px;
+
+    // @include flex-variant(flex, $justify: space-between);
+
+    width: 100%;
+    @include flex-variant(
+      flex,
+      $direction: row,
+      $wrap: wrap,
+      $gap: 30px,
+      $justify: space-evenly
+    );
+  }
+}

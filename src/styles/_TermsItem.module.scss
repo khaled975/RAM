@@ -1,0 +1,12 @@
+@use "../helpers/mixins" as *;
+
+.item {
+  border-bottom: 1px solid #eeeeee17;
+  cursor: pointer;
+  .termChildren {
+    height: 0;
+    margin-bottom: 0;
+    @include flex-variant(flex, $direction: column, $gap: 1.25rem);
+    overflow: hidden;
+  }
+}

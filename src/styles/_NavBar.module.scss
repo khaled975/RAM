@@ -1,0 +1,154 @@
+@import '../helpers/fonts';
+@import '../helpers/mixins'; // You may need to specify the correct path to your mixins file.
+
+.header {
+  width: 100%;
+  padding: 15px 0px;
+  .navBar {
+    margin-bottom: 30px;
+    @include flex-variant(
+      flex,
+      $direction: row,
+      $align: center
+    ); // Define the flex-variant mixin.
+    .logo {
+      margin-left: 1rem;
+      z-index: 20;
+
+      img {
+        width: 70px;
+        height: 70px;
+      }
+    }
+    .links {
+      @include flex-variant(
+        flex,
+        $direction: row,
+        $align: center,
+        $justify: center,
+        $grow: 1
+      );
+      li {
+        a {
+          padding: 18px 25px;
+          position: relative;
+          color: #fff;
+          font-family: 'Kufi-Regular';
+          transition: 0.1s;
+          &::before {
+            content: '';
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            left: 0;
+            bottom: 3px;
+            background-color: #be001b;
+            transform: scale(0);
+            transition: 0.1s;
+          }
+          &:hover {
+            color: #be001b;
+          }
+          &:hover::before {
+            transform: scale(1);
+          }
+        }
+      }
+.Tasgel{
+  
+}
+
+    }
+
+    @media screen and (max-width: 908px) {
+      .links {
+        @include flex-variant(
+          flex,
+          $direction: column,
+          $justify: space-evenly
+        ); // Define the flex-variant mixin.
+      }
+      .logo {
+        position: fixed;
+        top: 15px;
+      }
+    }
+  }
+}
+
+#nav-toggle {
+  position: absolute;
+  top: -100px;
+}
+
+nav .icon-burger {
+  display: none;
+  position: fixed;
+  left: 11%;
+  transform: translateY(-50%);
+  top: 45px;
+}
+
+nav .icon-burger .line {
+  width: 30px;
+  height: 5px;
+  background-color: #fff;
+  margin: 5px;
+  border-radius: 3px;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 908px) {
+  nav .logo {
+    float: none;
+    width: auto;
+    justify-content: center;
+  }
+
+  nav .links {
+    float: none;
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    top: 0px;
+    bottom: 100%;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: all 0.5s ease-in-out;
+  }
+
+  nav .links a {
+    font-size: 20px;
+  }
+
+  nav :checked ~ .links {
+    bottom: 0;
+  }
+
+  nav .icon-burger {
+    display: block;
+    z-index: 20;
+  }
+
+  nav :checked ~ .icon-burger .line:nth-child(1) {
+    transform: translateY(10px) rotate(225deg);
+  }
+
+  nav :checked ~ .icon-burger .line:nth-child(3) {
+    transform: translateY(-10px) rotate(-225deg);
+  }
+
+  nav :checked ~ .icon-burger .line:nth-child(2) {
+    opacity: 0;
+  }
+}

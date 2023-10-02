@@ -1,0 +1,34 @@
+@use "../helpers/mixins" as *;
+@use "../helpers/fonts" as *;
+
+.head {
+  @include flex-variant(
+    flex,
+    $direction: row,
+    $justify: space-between,
+    $align: center
+  );
+  font-size: 1.25rem;
+
+  .headerName {
+    padding: 50px 0;
+    @include flex-variant(flex, $direction: row, $align: center, $gap: 1.5rem);
+    font-family: "Kufi-Bold";
+    span {
+      line-height: 1.5rem;
+    }
+  }
+  .arrow {
+    width: 24px;
+    height: 24px;
+    @include flex-variant(
+      flex,
+      $direction: row,
+      $justify: center,
+      $align: center
+    );
+    border-radius: 50%;
+    background-color: #343a40;
+    cursor: pointer;
+  }
+}

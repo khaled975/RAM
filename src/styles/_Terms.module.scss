@@ -1,0 +1,12 @@
+@use "../helpers/mixins" as *;
+@use "../helpers/fonts" as *;
+
+.terms {
+  color: #fff;
+  .items {
+    font-family: "Kufi-Regular";
+    .paragraph {
+      line-height: 1.7rem;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@use "../helpers/mixins" as *;
+.auth {
+  width: 100%;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  @include flex-variant(
+    flex,
+    $direction: row,
+    $align: center,
+    $justify: center
+  );
+}

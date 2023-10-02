@@ -1,0 +1,8 @@
+@use "../helpers/mixins" as *;
+
+.store {
+  .products {
+    width: 100%;
+    @include flex-variant(flex, $direction: row, $wrap: wrap, $gap: 30px,$justify:space-evenly);
+  }
+}

@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  direction: rtl;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: Kufi-Light;
+  src: url("../assets/fonts/NotoKufiArabic-Light.ttf");
+}
+@font-face {
+  font-family: Kufi-Regular;
+  src: url("../assets/fonts/NotoKufiArabic-Regular.ttf");
+}
+@font-face {
+  font-family: Kufi-Medium;
+  src: url("../assets/fonts/NotoKufiArabic-Medium.ttf");
+}
+@font-face {
+  font-family: Kufi-Bold;
+  src: url("../assets/fonts/NotoKufiArabic-Bold.ttf");
+}
+.header .navBar .links, .header .navBar {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  padding: 15px 0px;
+}
+.header .navBar .logo {
+  margin-left: 1rem;
+}
+.header .navBar .logo img {
+  width: 70px;
+  height: 70px;
+}
+.header .navBar .links {
+  justify-content: center;
+  flex-grow: 1;
+}
+.header .navBar .links li a {
+  padding: 18px 25px;
+  position: relative;
+  color: #fff;
+  font-family: "Kufi-Regular";
+  transition: 0.2s;
+}
+.header .navBar .links li a::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  background-color: #fff;
+  transform: scale(0);
+  transition: 0.2s;
+}
+.header .navBar .links li a:hover {
+  color: #be001b;
+}
+.header .navBar .links li a:hover::before {
+  background-color: #be001b;
+  transform: scale(1);
+}
+
+.root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.landing {
+  height: 100%;
+  padding: 60px 150px;
+  background-color: #0c101a;
+}
+.landing .content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../assets/images/home.png");
+  background-size: cover;
+  border-radius: 10px;
+  box-shadow: 0 -15px 60px 6px rgba(50, 50, 93, 0.25);
+}
+.landing .content .body {
+  width: 100%;
+  flex: 1;
+  direction: ltr;
+}
+.landing .content .body .info {
+  width: 50%;
+  margin-top: 55px;
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+  color: #fff;
+}
+.landing .content .body .info .text h1 {
+  margin-bottom: 15px;
+  font-size: 3vw;
+  font-family: "Kufi-Medium", sans-serif;
+}
+.landing .content .body .info .text p {
+  font-size: 1vw;
+  line-height: 1.7;
+  font-family: "Kufi-Regular", sans-serif;
+}
+.landing .content .body .info .storeBtn {
+  display: flex;
+  justify-content: end;
+  margin-top: 35px;
+}
+
+.footer {
+  width: 100%;
+  padding: 15px 0;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Kufi-Regular", sans-serif;
+}
+.footer .items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+.footer .items .social {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  color: #fff;
+  line-height: 0;
+}
+.footer .items .social svg {
+  margin-right: 10px;
+  font-size: 30px;
+}
+.footer .items .text {
+  flex: 1;
+}
+.footer .items .payment {
+  flex: 1;
+  display: flex;
+  justify-content: start;
+  gap: 25px;
+  font-size: 30px;
+}/*# sourceMappingURL=main.css.map */

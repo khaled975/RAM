@@ -1,0 +1,55 @@
+@use "../helpers/fonts" as *;
+@use "../helpers/mixins" as *;
+
+%flex-1 {
+  flex: 1;
+}
+.footer {
+  width: 100%;
+  padding: 15px 0;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Kufi-Regular", sans-serif;
+  .items {
+    @include flex-variant(
+      flex,
+      $direction: row,
+      $align: center,
+      $justify: space-between
+    );
+    text-align: center;
+    .social {
+      @include flex-variant(
+        flex,
+        $direction: row,
+        $align: center,
+        $justify: flex-start
+      );
+      @extend %flex-1;
+      color: #fff;
+      line-height: 0;
+      svg {
+        margin-right: 10px;
+        font-size: 30px;
+      }
+    }
+    .text {
+      @extend %flex-1;
+    }
+    .payment {
+      @include flex-variant(
+        flex,
+        $direction: row,
+        $align: center,
+        $justify: flex-end,
+        $gap: 12px
+      );
+      @extend %flex-1;
+      font-size: 35px;
+      svg {
+        width: 1.1em;
+        height: 1.1em;
+      }
+    }
+  }
+}

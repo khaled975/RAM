@@ -1,0 +1,21 @@
+@use "./colors" as *;
+
+.dark {
+  .text {
+    color: $white;
+  }
+  .background {
+    background-color: $purple-2;
+  }
+  .backgroundDarker {
+    background-color: $purple-3;
+  }
+  .line {
+    background: linear-gradient(
+      90deg,
+      rgba(224, 225, 226, 0) 0%,
+      rgb(224, 225, 226) 49.52%,
+      rgba(224, 225, 226, 0) 100%
+    );
+  }
+}

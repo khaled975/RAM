@@ -1,0 +1,27 @@
+@use "../helpers/mixins" as *;
+
+.root {
+  max-width: 100vw;
+  min-height: 100vh;
+  padding: 0 !important;
+  .nav {
+    position: absolute;
+    top: 16px;
+    left: 0;
+    z-index: 100;
+  }
+  .body {
+    @include flex-variant(flex, $direction: column);
+    .image {
+      min-height: 43vh;
+      max-height: 50vh;
+      width: calc(100vw - 50px);
+      max-width: calc(100vw - 50px);
+      margin-inline: auto;
+      margin-top: 14px;
+      border-radius: 20px;
+      background-image: url("../assets/images/barnd-bg.png");
+      background-size: cover;
+    }
+  }
+}

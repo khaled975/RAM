@@ -1,0 +1,236 @@
+@use "../helpers/fonts" as *;
+@use "../helpers/mixins" as *;
+
+%span-style {
+  font-size: 0.8em;
+  color: #272145;
+  font-family: "Kufi-Bold";
+}
+%p-style {
+  font-size: 0.65em;
+  color: #343a40;
+}
+%close-lines {
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  background-color: #272145;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+.card {
+  width: 250px;
+  @include flex-variant(flex, $direction: column, $align: center);
+  background-color: #272145;
+  border-radius: 15px;
+  box-shadow: #0000001a 0px 5px 14px;
+  color: #fff;
+  .itemImg {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .itemText {
+    width: 100%;
+    padding: 20px;
+    @include flex-variant(flex, $direction: column, $justify: space-between);
+    flex-grow: 1;
+    .details {
+      padding-bottom: 15px;
+      @include flex-variant(
+        flex,
+        $direction: row,
+        $justify: space-between,
+        $align: center,
+        $gap: 10px
+      );
+      flex-grow: 1;
+      font-size: 0.9vw;
+      border-bottom: 1px solid #eeeeee17;
+      p {
+        font-family: "Kufi-Bold";
+        letter-spacing: 1px;
+      }
+      .infoIcon {
+        min-width: 30px;
+        height: 30px;
+        color: #272145;
+        @include flex-variant(
+          flex,
+          $direction: row,
+          $justify: center,
+          $align: center
+        );
+        font-size: 1.2em;
+        border-radius: 50%;
+        background-color: #fff;
+        cursor: pointer;
+      }
+    }
+
+    .buyInfo {
+      @include flex-variant(
+        flex,
+        $direction: row,
+        $justify: center,
+        $align: center
+      );
+
+      .addText {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+.infoCard {
+  width: 70%;
+  /* height: 60%; */
+  padding: 20px 30px;
+  @include flex-variant(flex, $direction: row, $gap: 50px);
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  background-image: linear-gradient(to left, #d3cce3, #e9e4f0);
+  border-radius: 8px;
+
+  .close {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    left: 1vw;
+    top: 1vw;
+    @include flex-variant(
+      flex,
+      $direction: row,
+      $align: center,
+      $justify: center
+    );
+    cursor: pointer;
+    .left {
+      @extend %close-lines;
+      transform: rotate(45deg);
+    }
+    .right {
+      @extend %close-lines;
+      transform: rotate(-45deg);
+    }
+    &:hover {
+      .left {
+        transform: rotate(45deg) scale(1.2);
+      }
+      .right {
+        transform: rotate(-45deg) scale(1.2);
+      }
+    }
+  }
+  .productDetails {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 24px;
+    font-family: "Kufi-Regular";
+    width: 100%;
+    h2 {
+      margin-bottom: 20px;
+      color: #272145;
+      font-family: "Kufi-Bold";
+      font-size: 1.1em;
+    }
+    .code {
+      @include flex-variant(flex, $direction: row, $align: center, $gap: 5px);
+      span {
+        @extend %span-style;
+      }
+      p {
+        font-family: "Kufi-Medium";
+        @extend %p-style;
+      }
+    }
+    .productPrice {
+      padding: 0 0.65vw;
+      justify-content: flex-start;
+      .price {
+        color: #343a40;
+      }
+      span.discount {
+        color: #343a4099;
+      }
+    }
+    .productDescription {
+      @include flex-variant(
+        flex,
+        $direction: column,
+        $justify: center,
+        $gap: 10px
+      );
+      span {
+        @extend %span-style;
+      }
+      p {
+        padding-top: 10px;
+        @extend %p-style;
+        line-height: 1.4;
+      }
+      .video {
+        font-size: 1em;
+        @include flex-variant(
+          flex,
+          $direction: row,
+          $align: center,
+          $gap: 10px
+        );
+        span {
+          @extend %span-style;
+        }
+        svg {
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+  .productImg {
+    /* width: calc(45% - 25px); */
+    /* height: 88%; */
+    border-radius: 8px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .card {
+    .itemText {
+      .details {
+        font-size: 3vw;
+      }
+    }
+  }
+  .infoCard {
+    flex-direction: column;
+    gap: 18px;
+    .close {
+      width: 22px;
+      height: 25px;
+    }
+    .productDetails {
+      gap: 6px;
+      font-size: 17px;
+      h2 {
+        margin-bottom: 10px;
+      }
+      .productDescription {
+        gap: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@use "../helpers/mixins" as *;
+
+.root {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 15px !important;
+  @include flex-variant(flex, $direction: row);
+}

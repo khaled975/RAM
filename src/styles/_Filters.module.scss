@@ -1,0 +1,12 @@
+@use "../helpers/fonts" as *;
+@use "../helpers/mixins" as *;
+
+.filtersList {
+  margin: 0 0 40px;
+  padding: 0 25px;
+  @include flex-variant(flex, $direction: row, $gap: 40px);
+  .filterItem {
+    color: #fff;
+    cursor: pointer;
+  }
+}
